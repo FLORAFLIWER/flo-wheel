@@ -1,0 +1,25 @@
+# 构建产物
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# 生成的中间图标（只保留 MouseWheel.ico）
+assets/icon_*.png
+assets/icon.png
+
+# 本地配置与日志
+config.json
+*.log
+portable.flag
+
+# 编辑器
+.vscode/
+.idea/
