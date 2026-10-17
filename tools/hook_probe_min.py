@@ -57,10 +57,12 @@ def main() -> int:
         env = dict(os.environ, PYTHONPATH=str(ROOT / "src"), PYTHONIOENCODING="utf-8")
         time.sleep(1.0)
         py = sys.executable
-        tool = str(ROOT / "tools" / "inject_x1.py")
-        subprocess.run([py, tool, "--down"], check=True, stdout=subprocess.DEVNULL, env=env)
+        tool = str(ROOT / "tools" / "inject_mouse.py")
+        subprocess.run([py, tool, "--button", "middle", "--down"], check=True,
+                       stdout=subprocess.DEVNULL, env=env)
         time.sleep(0.4)
-        subprocess.run([py, tool, "--up"], check=True, stdout=subprocess.DEVNULL, env=env)
+        subprocess.run([py, tool, "--button", "middle", "--up"], check=True,
+                       stdout=subprocess.DEVNULL, env=env)
 
     threading.Thread(target=injector, daemon=True).start()
 

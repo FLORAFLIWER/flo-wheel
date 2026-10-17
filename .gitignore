@@ -23,3 +23,7 @@ portable.flag
 # 编辑器
 .vscode/
 .idea/
+
+# 调试产物与本地脚本
+probe.png
+发布到GitHub.cmd
