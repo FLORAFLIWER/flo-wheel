@@ -36,7 +36,14 @@ IGNORE_DIRS = {
     "build", "dist", ".idea", ".vscode",
 }
 IGNORE_SUFFIXES = {".pyc", ".pyo", ".log", ".spec", ".tmp"}
-IGNORE_FILES = {"config.json", "portable.flag", "icon.png"}
+#: 这些只在本机有意义，不要进公开仓库
+IGNORE_FILES = {
+    "config.json",
+    "portable.flag",
+    "icon.png",
+    "probe.png",
+    "发布到GitHub.cmd",
+}
 
 
 class GitHubError(RuntimeError):
